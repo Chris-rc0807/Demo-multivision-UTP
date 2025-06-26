@@ -1,0 +1,603 @@
+/* Hoja de estilos */
+
+/* Declaración de variables*/
+:root {
+    /* Variables para tipografías */
+    /* --fuente1:"verdana";  */
+    /* Fuente principal */
+    --fuente1: "Poppins", sans-serif;
+    --fuente2: "Libre Franklin", sans-serif;
+    --fuente3: "Space Grotesk", sans-serif;
+
+    /* Paleta de colores */
+    --color1: #fff;
+    /* Blanco */
+    --color2: #2bbfda;
+    /* Turquesa */
+    --color3: #203646;
+    /* Color de títulos */
+    --color4: #344856;
+    /* Color de texto */
+    --color5: #212529;
+    /* Fondo del pie de página */
+    --color6: #dfdfdf;
+    /* Texto del pie de página */
+}
+
+/* Selector universal de elementos HTML */
+* {
+    /* Elimina los espacios predeterminados del navegador*/
+    margin: 0;
+    padding: 0;
+
+    /* Evita que se modifique el tamaño de la caja cuando
+    le agregas padding o border */
+    box-sizing: border-box;
+}
+
+/* Selectores de tipo HTML */
+html {
+    /* Suaviza el efecto de desplazamiento del scroll */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente1);
+    line-height: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+img,
+iframe,
+video {
+    /* Eliminar el espacio predeterminado que aparece debajo del objeto */
+    display: block;
+}
+
+table {
+    border: 1px solid var(--color2);
+    width: 100%;
+    border-collapse: collapse;
+    /* Combinar los bordes */
+}
+
+th,
+td {
+    border: 1px solid var(--color2);
+    padding: 12px;
+    text-align: center;
+}
+
+caption {
+    text-align: left;
+    /* Alinear texto: left/center/right/justify */
+    font-weight: bold;
+    /* Negrita */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+thead,
+tfoot {
+    background-color: var(--color6);
+    color: var(--color3);
+}
+
+tfoot td {
+    font-style: italic;
+    /* Cursiva */
+    text-align: right;
+}
+
+/* Selectores de tipo ID */
+#barra-superior {
+    background-color: var(--color4);
+    color: var(--color1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 0.8em;
+}
+
+#cabecera {
+    background-color: var(--color1);
+    color: var(--color4);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#nosotros {
+    background-color: var(--color2);
+    color: var(--color1);
+    padding-top: 150px;
+}
+
+#servicios {
+    background-color: var(--color1);
+    color: var(--color4);
+}
+
+#pie {
+    background-color: var(--color5);
+    color: var(--color6);
+}
+
+/* Selectores de tipo CLASS */
+.contenedor {
+    max-width: 70%;
+    margin: auto;
+}
+
+.espaciado {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.ajustar-img {
+    width: 100%;
+    height: auto;
+}
+
+.ajustar-mapa {
+    width: 100%;
+}
+
+.ajustar-video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font: inherit;
+    /* Hereda la fuente de su contenedor padre */
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color2);
+    color: var(--color4);
+}
+
+.boton-enviar {
+    background-color: var(--color2);
+    color: var(--color1);
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font: inherit;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.link-acuerdo {
+    color: var(--color2);
+    text-decoration: none;
+    /* Quitar el subrayado */
+}
+
+select {
+    color: var(--color4);
+}
+
+input::placeholder {
+    color: var(--color4);
+}
+
+textarea::placeholder {
+    color: var(--color4);
+}
+
+textarea {
+    resize: none;
+}
+
+.fila {
+    /* Habilita flexbox*/
+    display: flex;
+
+    /* Coloca la cajas hijos en fila */
+    flex-direction: row;
+
+    /* Permite multifila con las cajas hijo */
+    flex-wrap: wrap;
+
+    /* Elimina el padding-left y padding-right 
+    de la primera y última columna, respectivamente */
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.columna {
+    /* Para que las columnas tengan el mismo ancho */
+    flex-basis: 0;
+    flex-grow: 1;
+
+    /* Espacio entre columnas */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-20 {
+    flex-basis: 20%;
+    max-width: 20%;
+}
+
+.col-25 {
+    flex-basis: 25%;
+    max-width: 25%;
+}
+
+.col-30 {
+    flex-basis: 30%;
+    max-width: 30%;
+}
+
+.col-33 {
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+}
+
+.col-40 {
+    flex-basis: 40%;
+    max-width: 40%;
+}
+
+.col-50 {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.col-60 {
+    flex-basis: 60%;
+    max-width: 60%;
+}
+
+
+.col-66 {
+    flex-basis: 66.67%;
+    max-width: 66.67%;
+}
+
+.col-70 {
+    flex-basis: 70%;
+    max-width: 70%;
+}
+
+.col-75 {
+    flex-basis: 75%;
+    max-width: 75%;
+}
+
+.col-80 {
+    flex-basis: 80%;
+    max-width: 80%;
+}
+
+.col-100 {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+
+.bs-link {
+    color: var(--color1);
+    text-decoration: none;
+    /* Quita el subrayado */
+    margin-right: 10px;
+}
+
+.bs-alinear-cajas {
+    justify-content: space-between;
+}
+
+.fijar-cabecera {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+.banner-padre {
+    /* Se usa para configurar posicionamiento dentro de la
+    la caja padre */
+    position: relative;
+}
+
+.banner-hijo {
+    /* Se usa para configurar el posicionamiento de un elemento
+    hijo, dentro de su caja padre.*/
+    position: absolute;
+
+    /* Coordenadas de poscionamiento */
+    bottom: -100px;
+    /* bottom/top*/
+    left: calc(50% - 300px);
+    /* left/right */
+
+    /* Tamaño y formatos */
+    width: 600px;
+    background-color: var(--color4);
+    color: var(--color1);
+    padding: 20px;
+    font-size: 0.8em;
+    text-align: center;
+    opacity: 90%;
+    /* box-shadow: 3px 0px 18px 9px #000000; */
+    box-shadow: 0 15px 20px 0 rgba(32, 54, 70, 0.4);
+
+    /* Evitar que el tamaño de una caja cambie cuando
+    se agregan padding y border. */
+    box-sizing: border-box;
+
+}
+
+
+.zoomInLeft {
+    -webkit-animation-name: zoomInLeft;
+    animation-name: zoomInLeft;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes zoomInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+        transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+        transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+}
+
+@keyframes zoomInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+        transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+        transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+}
+
+
+/* ESTILOS PARA PERSONALIZAR LA BARRA DE NAVEGACIÓN Y LA BARRA DE MENÚ */
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 120px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none; /* Quita las viñetas */
+}
+
+.nav-menu-item {
+    margin-left: 10px;
+}
+
+.nav-menu-link {
+    text-decoration: none; /* Quita el subrayado */
+    color: var(--color4);
+    padding: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-menu-link:hover {
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+/* BOTÓN HAMBURGUESA */
+
+.menu-toggle{
+    cursor: pointer;
+    font-size: 2em;
+    display: none; /* Oculta el botón */
+}
+
+/* Alterna la visibilidad de la barra de menú cuando 
+    se hace click en el botón hamburguesa */
+
+.nav-menu.active{
+    display: flex;
+}
+
+/* FIN DE LOS ESTILOS DE BARRA DE NAVEGACIÓN */
+
+.scroll-up {
+    /* Posición del botón */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    /* Formato */
+    width: 45px;
+    height: 45px;
+
+    line-height: 45px;
+    text-align: center;
+
+    background-color: var(--color2);
+    color: var(--color1);
+    border: 1px solid var(--color1);
+}
+
+.alinear-vertical {
+    align-items: center;
+}
+
+/* ESTILOS PARA CONFIGURAR EL DISEÑO RESPONSIVE CSS */
+
+/* Para pantallas grandes de escritorio (mayores a 1200px) */
+@media screen and (min-width:1200px) {
+    .contenedor {
+        max-width: 1140px;
+    }
+}
+
+/* Para pantallas medianas o tabletas horizontales */
+@media screen and (max-width:992px) {
+    .contenedor{
+        max-width: 80%;
+    }
+
+    .espaciado{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+/* Para pantallas de tabletas en vertical */
+@media screen and (max-width:768px) {
+    .contenedor{
+        max-width: 85%;
+    }
+
+    h1, h2, h3, h4 {
+        font-size: 1.6em;
+    }
+
+    .banner-hijo {
+        position: static; /* Vuelve a su posicionamiento original */
+        width: 100%;
+    }
+
+    #nosotros .columna , #formulario-contacto .columna{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    #formulario-contacto .fila{
+        flex-direction: column-reverse;
+    }
+
+    /* Para menú responsive */
+
+    .nav-menu{
+        /* Posicionar el menú */
+        flex-direction: column;
+        position: absolute;
+        top: 69px;
+        right: 0px;
+
+        /* Formato del menú */
+        background-color: var(--color6);
+        width: 30%;
+        padding: 10px;
+
+        /* Ocultar el menú */
+        display: none;
+    }
+
+    .nav-menu-link{
+        display: block;
+        padding: 5px;
+        margin: 2px;
+        background-color: var(--color2);
+        color: var(--color1);
+        text-align: center;
+    }
+
+    .nav-menu-item{
+        margin: 0;
+    }
+
+    .menu-toggle{
+        display: block; /* Muestra el botón hamburguesa */
+    }
+}
+
+/* Para pantallas celulares */
+@media screen and (max-width:576px){
+    .contenedor{
+        max-width: 90%;
+    }
+
+    body{
+        font-size: 0.9em;
+    }
+
+    h1, h2, h3, h4{
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    .espaciado{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #especialistas .columna{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+#resultado{
+    text-align: center;
+}
+
+#form-cita{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 10px;
+    margin: auto;
+}
+
+#form-cita input, #form-cita select, #form-cita button{
+    font: inherit;
+    padding: 5px;
+}
+
+#form-cita button{
+    background-color: #005f99;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
