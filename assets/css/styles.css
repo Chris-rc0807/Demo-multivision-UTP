@@ -309,10 +309,6 @@ textarea {
     justify-content: space-between;
 }
 
-.nav-logo {
-    width: 120px;
-}
-
 .fijar-cabecera {
     position: sticky;
     top: 0px;
@@ -400,11 +396,18 @@ textarea {
     }
 }
 
+
+/* ESTILOS PARA PERSONALIZAR LA BARRA DE NAVEGACIÓN Y LA BARRA DE MENÚ */
+
 .nav-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav-logo {
+    width: 120px;
 }
 
 .nav-menu {
@@ -428,6 +431,23 @@ textarea {
     background-color: var(--color2);
     color: var(--color1);
 }
+
+/* BOTÓN HAMBURGUESA */
+
+.menu-toggle{
+    cursor: pointer;
+    font-size: 2em;
+    display: none; /* Oculta el botón */
+}
+
+/* Alterna la visibilidad de la barra de menú cuando 
+    se hace click en el botón hamburguesa */
+
+.nav-menu.active{
+    display: flex;
+}
+
+/* FIN DE LOS ESTILOS DE BARRA DE NAVEGACIÓN */
 
 .scroll-up {
     /* Posición del botón */
@@ -496,8 +516,39 @@ textarea {
         flex-direction: column-reverse;
     }
 
+    /* Para menú responsive */
+
     .nav-menu{
+        /* Posicionar el menú */
         flex-direction: column;
+        position: absolute;
+        top: 69px;
+        right: 0px;
+
+        /* Formato del menú */
+        background-color: var(--color6);
+        width: 30%;
+        padding: 10px;
+
+        /* Ocultar el menú */
+        display: none;
+    }
+
+    .nav-menu-link{
+        display: block;
+        padding: 5px;
+        margin: 2px;
+        background-color: var(--color2);
+        color: var(--color1);
+        text-align: center;
+    }
+
+    .nav-menu-item{
+        margin: 0;
+    }
+
+    .menu-toggle{
+        display: block; /* Muestra el botón hamburguesa */
     }
 }
 
@@ -525,4 +576,28 @@ textarea {
         flex-basis: 100%;
         max-width: 100%;
     }
+}
+
+#resultado{
+    text-align: center;
+}
+
+#form-cita{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 10px;
+    margin: auto;
+}
+
+#form-cita input, #form-cita select, #form-cita button{
+    font: inherit;
+    padding: 5px;
+}
+
+#form-cita button{
+    background-color: #005f99;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
